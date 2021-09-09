@@ -638,6 +638,195 @@
                     </table>
                 </div>
             </div>
+            <div id="3-10" class="content">
+                <p class="title">FileStream</p>
+                <p class="dscrpt">Api2 중 <strong>FileStream</strong>은 기기 내부저장소에 대한 기능을 제공합니다.</p>
+                <div class="table">
+                    <table>
+                        <th>이름</th>
+                        <th>형식</th>
+                        <th>설명</th>
+                        <tr>
+                            <td><p class="code">read(path: String)</p></td>
+                            <td><p class="code">String</p></td>
+                            <td>path경로(파일 이름까지 포함)에 있는 파일 내용을 읽어 반환합니다.</td>
+                        </tr>
+                        <tr>
+                            <td><p class="code">write(path: String, data: String)</p></td>
+                            <td><p class="code">String</p></td>
+                            <td>path경로(파일 이름까지 포함)에 <p class="code">data</p>를 덮어씁니다. 반환값은 최종 파일 내용입니다.</td>
+                        </tr>
+                        <tr>
+                            <td><p class="code">append(path: String, data: String)</p></td>
+                            <td><p class="code">String</p></td>
+                            <td>path경로(파일 이름까지 포함)에 <p class="code">data</p>를 이어씁니다. 반환값은 최종 파일 내용입니다.</td>
+                        </tr>
+                        <tr>
+                            <td><p class="code">remove(path: String)</p></td>
+                            <td><p class="code">Boolean</p></td>
+                            <td>path경로(파일 이름까지 포함)을 삭제합니다.<br>반환값은 <p class="code">java.io.File.delete()</p>의 결과값이며 삭제중 예외가 발생할 경우 <p class="code">false</p>를 반환합니다.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div id="3-11" class="content">
+                <p class="title">Log</p>
+                <p class="dscrpt">Api2 중 <strong>Log</strong>는 메신저봇R 내에 있는 로그화면에 로그를 작성하는 기능을 제공합니다.</p>
+                <div class="table">
+                    <table>
+                        <th>이름</th>
+                        <th>형식</th>
+                        <th>설명</th>
+                        <tr>
+                            <td><p class="code" id="p">d(data: String)</p><br><p class="code" id="p">debug(String data)</p><br><p class="code" id="p">d(String data, Boolean showToast = false)</p><br><p class="code" id="p">debug(String data, Boolean showToast = false)</p></td>
+                            <td><p class="code">void</p></td>
+                            <td>디버그 로그를 작성합니다.</td>
+                        </tr>
+                        <tr>
+                            <td><p class="code" id="p">e(data: String)</p><br><p class="code" id="p">error(String data)</p><br><p class="code" id="p">e(String data, Boolean showToast = false)</p><br><p class="code" id="p">error(String data, Boolean showToast = false)</p></td>
+                            <td><p class="code">void</p></td>
+                            <td>에러 로그를 작성합니다.</td>
+                        </tr>
+                        <tr>
+                            <td><p class="code" id="p">i(data: String)</p><br><p class="code" id="p">info(String data)</p><br><p class="code" id="p">i(String data, Boolean showToast = false)</p><br><p class="code" id="p">info(String data, Boolean showToast = false)</p></td>
+                            <td><p class="code">void</p></td>
+                            <td>정보 로그를 작성합니다.</td>
+                        </tr>
+                        <tr>
+                            <td><p class="code">clear()</p></td>
+                            <td><p class="code">void</p></td>
+                            <td>로그를 모두 삭제합니다.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div id="3-12" class="content">
+                <p class="title">Device</p>
+                <p class="dscrpt">Api2 중 <strong>Device</strong>는 구동 기기에 대한 하드웨어/운영체제 정보를 제공합니다.</p>
+                <div class="table">
+                    <table>
+                        <th>이름</th>
+                        <th>형식</th>
+                        <th>설명</th>
+                        <tr>
+                            <td><p class="code">getBuild()</p></td>
+                            <td><p class="code">android.os.Build</p></td>
+                            <td><p class="code">android.os.Build()</p>값을 반환합니다.</td>
+                        </tr>
+                        <tr>
+                            <td><p class="code">getAndroidVersionCode()</p></td>
+                            <td><p class="code">int</p></td>
+                            <td>앱 구동 환경의 안드로이드 버전 코드를 반환합니다.</td>
+                        </tr>
+                        <tr>
+                            <td><p class="code">getAndroidVersionName()</p></td>
+                            <td><p class="code">String</p></td>
+                            <td>앱 구동 환경의 안드로이드 버전 이름을 반환합니다.</td>
+                        </tr>
+                        <tr>
+                            <td><p class="code">getPhoneBrand()</p></td>
+                            <td><p class="code">String</p></td>
+                            <td>앱 구동 환경의 휴대폰 브랜드명을 반환합니다.</td>
+                        </tr>
+                        <tr>
+                            <td><p class="code">getPhoneModel()</p></td>
+                            <td><p class="code">String</p></td>
+                            <td>앱 구동 환경의 휴대폰 모델명을 반환합니다.</td>
+                        </tr>
+                        <tr>
+                            <td><p class="code">isCharging()</p></td>
+                            <td><p class="code">Boolean</p></td>
+                            <td>앱 구동 환경 휴대폰이 충전중 여부를 반환합니다.</td>
+                        </tr>
+                        <tr>
+                            <td><p class="code">getPlugType()</p></td>
+                            <td><p class="code">String</p></td>
+                            <td>충전기의 타입을 반환합니다. (ac/wireless/usb/unknown)</td>
+                        </tr>
+                        <tr>
+                            <td><p class="code">getBatteryLevel()</p></td>
+                            <td><p class="code">int</p></td>
+                            <td>배터리 잔량(%)를 반환합니다.</td>
+                        </tr>
+                        <tr>
+                            <td><p class="code">getBatteryHealth()</p></td>
+                            <td><p class="code">int</p></td>
+                            <td>배터리 건강 상태에 대한 상수를 반환합니다. 반환하는 상수는 다음과 같습니다:<br><p class="code" id="p">android.os.BatteryManager.BATTERY_HEALTH_COLD</p><br><p class="code" id="p">android.os.BatteryManager.BATTERY_HEALTH_DEAD</p><br><p class="code" id="p">android.os.BatteryManager.BATTERY_HEALTH_GOOD</p><br><p class="code" id="p">android.os.BatteryManager.BATTERY_HEALTH_OVERHEAT</p><br><p class="code" id="p">android.os.BatteryManager.BATTERY_HEALTH_OVER_VOLTAGE</p><br><p class="code" id="p">android.os.BatteryManager.BATTERY_HEALTH_UNKNOWN</p><br><p class="code" id="p">android.os.BatteryManager.BATTERY_HEALTH_UNSPECIFIED_FAILURE</p></td>
+                        </tr>
+                        <tr>
+                            <td><p class="code">getBatteryTemperature()</p></td>
+                            <td><p class="code">int</p></td>
+                            <td>현재 배터리 온도의 10배 값을 반환합니다.</td>
+                        </tr>
+                        <tr>
+                            <td><p class="code">getBatteryVoltage()</p></td>
+                            <td><p class="code">int</p></td>
+                            <td>현재 배터리 전압(mV)을 반환합니다.</td>
+                        </tr>
+                        <tr>
+                            <td><p class="code">getBatteryStatus()</p></td>
+                            <td><p class="code">int</p></td>
+                            <td><p>배터리 상태에 대한 상수를 반환합니다. 반환하는 상수는 다음과 같습니다:<br><p class="code" id="p">android.os.BatteryManager.BATTERY_STATUS_CHARGING</p><br><p class="code" id="p">android.os.BatteryManager.BATTERY_STATUS_DISCHARGING</p><br><p class="code" id="p">android.os.BatteryManager.BATTERY_STATUS_FULL</p><br><p class="code" id="p">android.os.BatteryManager.BATTERY_STATUS_NOT_CHARGING</p><br><p class="code" id="p">android.os.BatteryManager.BATTERY_STATUS_UNKNOWN</p></td>
+                        </tr>
+                        <tr>
+                            <td><p class="code">getBatteryIntent()</p></td>
+                            <td><p class="code">android.content.Intent</p></td>
+                            <td><p class="code">context.registerReceiver(null, IntentFilter(Intent.ACTION_BATTERY_CHANGED))</p> 값을 반환합니다.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div id="3-13" class="content">
+                <p class="title">AppData</p>
+                <p class="dscrpt">Api2 중 <strong>AppData</strong>는 앱 데이터에 대한 기능을 지원합니다.</p>
+                <div class="table">
+                    <table>
+                        <th>이름</th>
+                        <th>형식</th>
+                        <th>설명</th>
+                        <tr>
+                            <td><p class="code">putBoolean(key: String, boolean: Boolean)</p></td>
+                            <td><p class="code">void</p></td>
+                            <td>앱 데이터에 불린값<p class="code">boolean</p>을 씁니다.</td>
+                        </tr>
+                        <tr>
+                            <td><p class="code">getBoolean(key: String)</p></td>
+                            <td><p class="code">Boolean</p></td>
+                            <td>앱 데이터에서 boolean값을 불러옵니다.</td>
+                        </tr>
+                        <tr>
+                            <td><p class="code">putInt(key: String, integer: int)</p></td>
+                            <td><p class="code">void</p></td>
+                            <td>앱 데이터에 정수<p class="code">integer</p>를 씁니다.</td>
+                        </tr>
+                        <tr>
+                            <td><p class="code">getInt(key: String)</p></td>
+                            <td><p class="code">int</p></td>
+                            <td>앱 데이터에서 정수값을 불러옵니다.</td>
+                        </tr>
+                        <tr>
+                            <td><p class="code">putString(key: String, string: String)</p></td>
+                            <td><p class="code">void</p></td>
+                            <td>앱 데이터에 문자열<p class="code">string</p>을 씁니다.</td>
+                        </tr>
+                        <tr>
+                            <td><p class="code">getString(key: String)</p></td>
+                            <td><p class="code">String</p></td>
+                            <td>앱 데이터에서 문자열값을 불러옵니다.</td>
+                        </tr>
+                        <tr>
+                            <td><p class="code">remove(key: String)</p></td>
+                            <td><p class="code">void</p></td>
+                            <td>AppData를 통해 저장한 앱 데이터 중 키값에 해당하는 앱 데이터를 지웁니다.</td>
+                        </tr>
+                        <tr>
+                            <td><p class="code">clear()</p></td>
+                            <td><p class="code">void</p></td>
+                            <td>AppData를 통해 저장한 모든 앱 데이터를 지웁니다.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
         </section>
         <section id="tool">
             <div id="view"><img id="view_img" src="img/view.png"><p id="online_txt">0</p><p>/</p><p id="view_txt">0</p><img id="arrow" src="img/arrow_up.png"></div>
